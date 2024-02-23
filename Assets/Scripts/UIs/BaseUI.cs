@@ -23,7 +23,7 @@ public class BaseUI : MonoBehaviour
         texts = new Dictionary<string, TMP_Text>();
 
         RectTransform[] children = GetComponentsInChildren<RectTransform>();
-        foreach(RectTransform child in children)
+        foreach (RectTransform child in children)
         {
             string name = child.gameObject.name;
 
@@ -32,12 +32,12 @@ public class BaseUI : MonoBehaviour
             transforms.Add(name, child);
 
             Button button = child.GetComponent<Button>();
-            if(button != null )
+            if (button != null)
             {
                 buttons.Add(name, button);
             }
             TMP_Text text = child.GetComponent<TMP_Text>();
-            if(text != null)
+            if (text != null)
             {
                 texts.Add(name, text);
             }

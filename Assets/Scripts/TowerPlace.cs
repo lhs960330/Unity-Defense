@@ -8,47 +8,37 @@ using UnityEngine.InputSystem;
 public class TowerPlace : MonoBehaviour,
     IPointerClickHandler,
     IPointerEnterHandler,
-    IPointerExitHandler,
-    IPointerUpHandler,
-    IPointerDownHandler,
-    IPointerMoveHandler
+    IPointerExitHandler
 {
     [SerializeField] Renderer render;
     [SerializeField] Color normalColor;
     [SerializeField] Color highlightColor;
     [SerializeField] GameObject tower;
+
+    [SerializeField] InGameUI buildUI;
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Click");
-        Destroy(gameObject);
+       // Debug.Log("Click");
+        gameObject.isStatic = false;
         Instantiate(tower, transform.position, transform.rotation);
+        InGameUI ui = Manager.UI.ShowInGameUI(buildUI);
+        ui.SetTarget(transform);
+        ui.SetOffset(new Vector3(0, 150, 0));
         
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        Debug.Log("Down");
-    }
-
+   
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Enter");
+       // Debug.Log("Enter");
         render.material.color = highlightColor;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Exit");
+       // Debug.Log("Exit");
         render.material.color = normalColor;
     }
 
-    public void OnPointerMove(PointerEventData eventData)
-    {
-       // Debug.Log("Move");
-    }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        Debug.Log("Up");
-    }
+ 
 }

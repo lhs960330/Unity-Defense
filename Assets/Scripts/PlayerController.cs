@@ -33,14 +33,14 @@ public class PlayerController : MonoBehaviour
     }*/
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("충돌 중");
+       // Debug.Log("충돌 중");
         Monster monster = other.GetComponent<Monster>();
         if (monster != null)
         {
-            Debug.Log("몬스터 발견");
+            //Debug.Log("몬스터 발견");
             if ((transform.position - monster.transform.position).magnitude <= ragn)
             {
-                Debug.Log("공격");
+                //Debug.Log("공격");
                 monster.hp -= attek;
             }
             if (monster.hp < 0)
