@@ -19,8 +19,8 @@ public class TowerPlace : MonoBehaviour,
     public void OnPointerClick(PointerEventData eventData)
     {
        // Debug.Log("Click");
-        gameObject.isStatic = false;
-        Instantiate(tower, transform.position, transform.rotation);
+       // gameObject.isStatic = false;
+        //Instantiate(tower, transform.position, transform.rotation);
         InGameUI ui = Manager.UI.ShowInGameUI(buildUI);
         ui.SetTarget(transform);
         ui.SetOffset(new Vector3(0, 150, 0));
