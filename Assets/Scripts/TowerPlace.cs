@@ -13,32 +13,52 @@ public class TowerPlace : MonoBehaviour,
     [SerializeField] Renderer render;
     [SerializeField] Color normalColor;
     [SerializeField] Color highlightColor;
-    [SerializeField] GameObject tower;
+    // [SerializeField] GameObject tower;
 
-    [SerializeField] InGameUI buildUI;
+    [SerializeField] BuildUI buildUI;
+
+    [Header("Tower")]
+    [SerializeField] TowerData archorTower;
+    [SerializeField] TowerData canonTower;
+
     public void OnPointerClick(PointerEventData eventData)
     {
-       // Debug.Log("Click");
-       // gameObject.isStatic = false;
-        //Instantiate(tower, transform.position, transform.rotation);
-        InGameUI ui = Manager.UI.ShowInGameUI(buildUI);
+        // Debug.Log("Click");
+        // gameObject.isStatic = false;
+        // Instantiate(tower, transform.position, transform.rotation);
+        BuildUI ui = Manager.UI.ShowInGameUI(buildUI);
         ui.SetTarget(transform);
-        ui.SetOffset(new Vector3(0, 150, 0));
-        
+        ui.SetTowerPlace(this);
+
     }
 
-   
+
     public void OnPointerEnter(PointerEventData eventData)
     {
-       // Debug.Log("Enter");
+        // Debug.Log("Enter");
         render.material.color = highlightColor;
+        
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-       // Debug.Log("Exit");
+        // Debug.Log("Exit");
         render.material.color = normalColor;
     }
 
- 
+    public void BuildTower(string name)
+    {
+      if(name == "Archor")
+        {
+            gameObject.SetActive(false);
+           Tower tower= Instantiate(archorTower.prefab, transform.position, transform.rotation);
+            tower.SetTowerPlace(this);
+        }
+      else if(name == "Cannon")
+        {
+            gameObject.SetActive(false) ;
+            Tower tower = Instantiate(canonTower.prefab, transform.position, transform.rotation);
+            tower.SetTowerPlace(this);
+        }
+    }
 }

@@ -10,9 +10,11 @@ public class CameraController : MonoBehaviour
     private bool isCameraChlick = true;
     private Vector3 moverDir;
     private Vector3 mousDir;
+
     private void Update()
     {
         Move();
+
     }
     private void OnEnable()
     {
@@ -36,7 +38,7 @@ public class CameraController : MonoBehaviour
         moverDir.z = input.y;
 
     }
-    /*
+
     private void OnPointer(InputValue value)
     {
         Vector2 input = value.Get<Vector2>();
@@ -73,7 +75,8 @@ public class CameraController : MonoBehaviour
 
 
     }
-    */
+
+
     private void OnChlick(InputValue value)
     {
         if (isCameraChlick == true)

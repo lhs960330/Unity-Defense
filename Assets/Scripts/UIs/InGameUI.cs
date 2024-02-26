@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InGameUI : BaseUI
 {
@@ -22,5 +23,10 @@ public class InGameUI : BaseUI
     public void SetOffset(Vector3 offset)
     {
         followOffset = offset;
+    }
+
+    public void CloseUI()
+    {
+        Manager.UI.CloseInGameUI();
     }
 }

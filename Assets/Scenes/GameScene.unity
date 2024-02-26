@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44971085, g: 0.49977827, b: 0.5756336, a: 1}
+  m_IndirectSpecularColor: {r: 0.44971043, g: 0.49977744, b: 0.5756326, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10173,7 +10173,7 @@ Transform:
   m_GameObject: {fileID: 564605438}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -63.21546, y: 0, z: -29.4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12342,7 +12342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4423898835412130, guid: e09a1b1dd1e643e4fab78edda46db369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -64.6
+      value: -77.7
       objectReference: {fileID: 0}
     - target: {fileID: 4423898835412130, guid: e09a1b1dd1e643e4fab78edda46db369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13916,10 +13916,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   render: {fileID: 770217216}
-  normalColor: {r: 0, g: 0, b: 0, a: 0}
+  normalColor: {r: 1, g: 1, b: 1, a: 0}
   highlightColor: {r: 1, g: 0, b: 0, a: 1}
-  tower: {fileID: 5760605164303794111, guid: 77e87d9af0b0d4546b800285130792e1, type: 3}
-  buildUI: {fileID: 2335253692758876210, guid: 7cf39671dd9a4f8408486f128ca9f88c, type: 3}
+  buildUI: {fileID: 3641373359451597108, guid: 7cf39671dd9a4f8408486f128ca9f88c, type: 3}
+  archorTower: {fileID: 11400000, guid: 7c04690bf9be2194f9eafdaa3b1bf9d9, type: 2}
+  canonTower: {fileID: 11400000, guid: d2f13c04ad2f38442ac5a0d186bc5c7e, type: 2}
 --- !u!23 &770217216 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 23471093985503362, guid: c0ad9e12aa69f14419bc9e45d54eb299, type: 3}
@@ -17353,6 +17354,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4869522066687378, guid: 54d566c6c1772144a894b6090fd4ba1c, type: 3}
   m_PrefabInstance: {fileID: 1005991191}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1008783725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1008783726}
+  m_Layer: 0
+  m_Name: -----------------------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1008783726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008783725}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -47.703247, y: 29.358927, z: -41.298813}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1013107225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18781,8 +18813,9 @@ MonoBehaviour:
   render: {fileID: 1050600271}
   normalColor: {r: 1, g: 1, b: 1, a: 0}
   highlightColor: {r: 1, g: 0, b: 0, a: 1}
-  tower: {fileID: 5760605164303794111, guid: 77e87d9af0b0d4546b800285130792e1, type: 3}
-  buildUI: {fileID: 2335253692758876210, guid: 7cf39671dd9a4f8408486f128ca9f88c, type: 3}
+  buildUI: {fileID: 3641373359451597108, guid: 7cf39671dd9a4f8408486f128ca9f88c, type: 3}
+  archorTower: {fileID: 11400000, guid: 7c04690bf9be2194f9eafdaa3b1bf9d9, type: 2}
+  canonTower: {fileID: 11400000, guid: d2f13c04ad2f38442ac5a0d186bc5c7e, type: 2}
 --- !u!23 &1050600271 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 23471093985503362, guid: c0ad9e12aa69f14419bc9e45d54eb299, type: 3}
@@ -32963,7 +32996,7 @@ MonoBehaviour:
   endPoint: {fileID: 2049411610}
   monsterPrefab: {fileID: -5631071266716271043, guid: 127541ac1fb6311478eab84b234e7d93, type: 3}
   repeatTime: 1
-  count: 3
+  count: 2
 --- !u!4 &1841903926
 Transform:
   m_ObjectHideFlags: 0
@@ -34439,10 +34472,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   render: {fileID: 1934941651}
-  normalColor: {r: 0, g: 0, b: 0, a: 0}
+  normalColor: {r: 1, g: 1, b: 1, a: 0}
   highlightColor: {r: 1, g: 0, b: 0, a: 1}
-  tower: {fileID: 5760605164303794111, guid: 77e87d9af0b0d4546b800285130792e1, type: 3}
-  buildUI: {fileID: 2335253692758876210, guid: 7cf39671dd9a4f8408486f128ca9f88c, type: 3}
+  buildUI: {fileID: 3641373359451597108, guid: 7cf39671dd9a4f8408486f128ca9f88c, type: 3}
+  archorTower: {fileID: 11400000, guid: 7c04690bf9be2194f9eafdaa3b1bf9d9, type: 2}
+  canonTower: {fileID: 11400000, guid: d2f13c04ad2f38442ac5a0d186bc5c7e, type: 2}
 --- !u!23 &1934941651 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 23471093985503362, guid: c0ad9e12aa69f14419bc9e45d54eb299, type: 3}
@@ -38322,8 +38356,9 @@ SceneRoots:
   - {fileID: 770217212}
   - {fileID: 1934941647}
   - {fileID: 35287648}
-  - {fileID: 217040658}
-  - {fileID: 321776702}
   - {fileID: 90274879}
   - {fileID: 1533794262}
   - {fileID: 1245095895}
+  - {fileID: 1008783726}
+  - {fileID: 217040658}
+  - {fileID: 321776702}
