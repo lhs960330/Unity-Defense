@@ -13,7 +13,8 @@ public class BuildUI : InGameUI
         buttons["BarrackButton"].onClick.AddListener(BuildBarrackTower);
 
     }
-    // 람다식이 아닐때
+
+
     public void BuildCannonTower()
     {
         towerPlace.BuildTower("Cannon");
@@ -27,7 +28,7 @@ public class BuildUI : InGameUI
     }
     public void BuildBarrackTower()
     {
-        towerPlace.BuildTower("Barrack");
+        towerPlace.BuildTower("Barracks");
         CloseUI();
     }
 

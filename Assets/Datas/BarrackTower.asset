@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b17244d509297f41a3d949b9c88d950, type: 3}
+  m_Name: BarrackTower
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8635963472265217879, guid: d878a8c62b76e484d9fce5fff801598a, type: 3}
+  towers:
+  - name: BarrackTowerLv1
+    cons: {fileID: 4300000, guid: 5fc6da3905ac9894a856a23f790c91f3, type: 3}
+    build: {fileID: 4300000, guid: f0775d52b8c554942a08bf04064a632b, type: 3}
+    damage: 0
+    range: 0
+    buildTime: 1
+    buildCost: 0
+    sellCost: 0
+  - name: BarrackTowerLv2
+    cons: {fileID: 4300000, guid: 98d49845aaf07a7459315a0453fe60ed, type: 3}
+    build: {fileID: 4300000, guid: 7d453662dea4fe14ca37340c0eaeb18b, type: 3}
+    damage: 0
+    range: 0
+    buildTime: 2
+    buildCost: 0
+    sellCost: 0
+  - name: BarrackTowerLv3
+    cons: {fileID: 4300000, guid: f39fd7e5aedc02f4281f938197b0ed26, type: 3}
+    build: {fileID: 4300000, guid: ea717156fa313864e9d8ecf4ee89fc7d, type: 3}
+    damage: 0
+    range: 0
+    buildTime: 3
+    buildCost: 0
+    sellCost: 0
+  - name: BarrackTowerLv4
+    cons: {fileID: 4300000, guid: ea663d94af17f204bab2138fd6d7529a, type: 3}
+    build: {fileID: 4300000, guid: 04a85a830d659624b8faf292a327efed, type: 3}
+    damage: 0
+    range: 0
+    buildTime: 4
+    buildCost: 0
+    sellCost: 0

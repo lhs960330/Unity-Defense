@@ -13921,6 +13921,8 @@ MonoBehaviour:
   buildUI: {fileID: 3641373359451597108, guid: 7cf39671dd9a4f8408486f128ca9f88c, type: 3}
   archorTower: {fileID: 11400000, guid: 7c04690bf9be2194f9eafdaa3b1bf9d9, type: 2}
   canonTower: {fileID: 11400000, guid: d2f13c04ad2f38442ac5a0d186bc5c7e, type: 2}
+  mageTower: {fileID: 11400000, guid: 8cafae11c406e8a41a1fc8b62ce17873, type: 2}
+  barracksTower: {fileID: 11400000, guid: 108f77c70202bf448808d133a7330b4b, type: 2}
 --- !u!23 &770217216 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 23471093985503362, guid: c0ad9e12aa69f14419bc9e45d54eb299, type: 3}
@@ -18816,6 +18818,8 @@ MonoBehaviour:
   buildUI: {fileID: 3641373359451597108, guid: 7cf39671dd9a4f8408486f128ca9f88c, type: 3}
   archorTower: {fileID: 11400000, guid: 7c04690bf9be2194f9eafdaa3b1bf9d9, type: 2}
   canonTower: {fileID: 11400000, guid: d2f13c04ad2f38442ac5a0d186bc5c7e, type: 2}
+  mageTower: {fileID: 11400000, guid: 8cafae11c406e8a41a1fc8b62ce17873, type: 2}
+  barracksTower: {fileID: 11400000, guid: 108f77c70202bf448808d133a7330b4b, type: 2}
 --- !u!23 &1050600271 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 23471093985503362, guid: c0ad9e12aa69f14419bc9e45d54eb299, type: 3}
@@ -34477,6 +34481,8 @@ MonoBehaviour:
   buildUI: {fileID: 3641373359451597108, guid: 7cf39671dd9a4f8408486f128ca9f88c, type: 3}
   archorTower: {fileID: 11400000, guid: 7c04690bf9be2194f9eafdaa3b1bf9d9, type: 2}
   canonTower: {fileID: 11400000, guid: d2f13c04ad2f38442ac5a0d186bc5c7e, type: 2}
+  mageTower: {fileID: 11400000, guid: 8cafae11c406e8a41a1fc8b62ce17873, type: 2}
+  barracksTower: {fileID: 11400000, guid: 108f77c70202bf448808d133a7330b4b, type: 2}
 --- !u!23 &1934941651 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 23471093985503362, guid: c0ad9e12aa69f14419bc9e45d54eb299, type: 3}

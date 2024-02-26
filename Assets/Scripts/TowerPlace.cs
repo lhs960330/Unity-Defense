@@ -20,6 +20,8 @@ public class TowerPlace : MonoBehaviour,
     [Header("Tower")]
     [SerializeField] TowerData archorTower;
     [SerializeField] TowerData canonTower;
+    [SerializeField] TowerData mageTower;
+    [SerializeField] TowerData barracksTower;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -58,6 +60,18 @@ public class TowerPlace : MonoBehaviour,
         {
             gameObject.SetActive(false) ;
             Tower tower = Instantiate(canonTower.prefab, transform.position, transform.rotation);
+            tower.SetTowerPlace(this);
+        }
+        else if (name == "Mage")
+        {
+            gameObject.SetActive(false);
+            Tower tower = Instantiate(mageTower.prefab, transform.position, transform.rotation);
+            tower.SetTowerPlace(this);
+        }
+        else if (name == "Barracks")
+        {
+            gameObject.SetActive(false);
+            Tower tower = Instantiate(barracksTower.prefab, transform.position, transform.rotation);
             tower.SetTowerPlace(this);
         }
     }
