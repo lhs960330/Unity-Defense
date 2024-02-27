@@ -38,7 +38,8 @@ public class CanonTower : Tower
                     index++;
                     if(index >= monsterList.Count)
                     {
-                        index = 0;
+                        index = monsterList.Count - 1;
+                        break;
                     }
                 }
 

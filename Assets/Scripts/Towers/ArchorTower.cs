@@ -47,7 +47,19 @@ public class ArchorTower : Tower
         {
             if (monsterList.Count > 0)
             {
-                Attack(monsterList[0]);
+                int index = 0;
+                // monsterList[0] 이 null일때 에러가 떠서 고침
+                // index = index + 1 >= monsterList.Count? 0 : index + 1 
+                while (monsterList[index] == null)
+                {
+                    index++;
+                    if (index >= monsterList.Count)
+                    {
+                        index = monsterList.Count - 1;
+                        break;
+                    }
+                }
+                Attack(monsterList[index]);
                 yield return new WaitForSeconds(data.towers[level - 1].coolTime);
             }
             else
