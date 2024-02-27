@@ -14,9 +14,11 @@ public class CanonBall : MonoBehaviour
     public void SetTargetPos(Vector3 targetPos)
     {
         this.targetPos = targetPos;
+        StartCoroutine(CanonRoutine(transform.position, targetPos));
     }
     IEnumerator CanonRoutine(Vector3 startPos, Vector3 targetPos)
     {
+        float ySpeed = -1 * (0.5f * Physics.gravity.y * time * time + startPos.y) / time;
         float rate = 0f;
         while (rate < 1f)
         {
@@ -25,7 +27,11 @@ public class CanonBall : MonoBehaviour
             {
                 rate = 1f;
             }
-            transform.position = Vector3.Lerp(startPos, targetPos, rate);
+            Vector3 vec3 = Vector3.Lerp(startPos, targetPos, rate);
+            transform.position = new Vector3(vec3.x, transform.position.y, vec3.z);
+
+            ySpeed += Physics.gravity.y * Time.deltaTime;
+            transform.Translate(Vector3.up * ySpeed * Time.deltaTime);
 
             yield return null;
         }

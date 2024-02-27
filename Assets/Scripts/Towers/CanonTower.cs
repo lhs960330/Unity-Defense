@@ -5,6 +5,7 @@ using UnityEngine;
 public class CanonTower : Tower
 {
     [SerializeField] CanonBall ballPrefab;
+    [SerializeField] Transform canonPoint;
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -18,7 +19,7 @@ public class CanonTower : Tower
 
     public void Attack(Vector3 position)
     {
-        CanonBall canonBall = Instantiate(ballPrefab, transform.position, transform.rotation);
+        CanonBall canonBall = Instantiate(ballPrefab, canonPoint.position, canonPoint.rotation);
         canonBall.SetTargetPos(position);
         canonBall.SetDamage(data.towers[level - 1].damage);
     }
@@ -29,7 +30,19 @@ public class CanonTower : Tower
         {
             if (monsterList.Count > 0)
             {
-                Attack(monsterList[0].transform.position);
+                int index = 0;
+                // monsterList[0] 이 null일때 에러가 떠서 고침
+                // index = index + 1 >= monsterList.Count? 0 : index + 1 
+                while (monsterList[index] == null)
+                {
+                    index++;
+                    if(index >= monsterList.Count)
+                    {
+                        index = 0;
+                    }
+                }
+
+                Attack(monsterList[index].transform.position);
                 yield return new WaitForSeconds(data.towers[level - 1].coolTime);
             }
             else

@@ -19,7 +19,7 @@ MonoBehaviour:
     build: {fileID: 4300002, guid: be1108ed848814640ad1a5b7b8fa80ea, type: 3}
     damage: 5
     range: 15
-    coolTime: 5
+    coolTime: 1
     buildTime: 1
     buildCost: 0
     sellCost: 0

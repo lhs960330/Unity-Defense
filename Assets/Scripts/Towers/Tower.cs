@@ -47,6 +47,7 @@ public class Tower : MonoBehaviour//, IPointerClickHandler
                 monsterList.Add(monster);
             }
             yield return new WaitForSeconds(data.towers[level - 1].coolTime);
+          
         }
     }
 
