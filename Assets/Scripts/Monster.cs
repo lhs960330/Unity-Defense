@@ -9,7 +9,14 @@ public class Monster : MonoBehaviour
 {
     //몬스터가 끝까지가 가게하고 마지막에 도착했으면 체력을 깍고 없어진다.
     [SerializeField] NavMeshAgent agent;
-    public float hp;
+    [SerializeField] int hp;
+    // 2. 시간상 이걸로 대체
+    [SerializeField] Slider hpBar;
+    // 1.체력바 이벤트활용
+    public int HP { get { return hp; } private set { hp = value; ; OnChangedHP?.Invoke(value); } }
+    public event UnityAction<int> OnChangedHP;
+
+    public UnityAction Ondied;
     public UnityEvent OnEndPontArrvied;
     //[SerializeField] Image hpBar;
 
@@ -17,6 +24,7 @@ public class Monster : MonoBehaviour
     {
         CheckEndPoint();
         //  HpBar();
+
     }
     /*   private void HpBar()
        {
@@ -34,6 +42,16 @@ public class Monster : MonoBehaviour
         {
             //Debug.Log("몬스터가 도착해 플레이어 공격");
             OnEndPontArrvied?.Invoke();
+            Destroy(gameObject);
+        }
+    }
+    public void TakeDamage(int damage)
+    {
+        HP -= damage;
+        hpBar.value = HP;
+        if (hp <= 0)
+        {
+            Ondied?.Invoke();
             Destroy(gameObject);
         }
     }

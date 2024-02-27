@@ -17,8 +17,9 @@ MonoBehaviour:
   - name: CanonTowerLv1
     cons: {fileID: 4300000, guid: 989701b84dfce9c4da39a33a9f9a4437, type: 3}
     build: {fileID: 4300002, guid: be1108ed848814640ad1a5b7b8fa80ea, type: 3}
-    damage: 0
-    range: 0
+    damage: 5
+    range: 15
+    coolTime: 5
     buildTime: 1
     buildCost: 0
     sellCost: 0
@@ -27,6 +28,7 @@ MonoBehaviour:
     build: {fileID: 4300002, guid: 257f854f145db2b4ebe40ddfa20f5024, type: 3}
     damage: 0
     range: 0
+    coolTime: 0
     buildTime: 2
     buildCost: 0
     sellCost: 0
@@ -35,6 +37,7 @@ MonoBehaviour:
     build: {fileID: 4300000, guid: 624b1250df12eab4789dd19d1ff90f7d, type: 3}
     damage: 0
     range: 0
+    coolTime: 0
     buildTime: 3
     buildCost: 0
     sellCost: 0
@@ -43,6 +46,7 @@ MonoBehaviour:
     build: {fileID: 4300000, guid: b701252387deac544ad33cc4a95d0a0a, type: 3}
     damage: 0
     range: 0
+    coolTime: 0
     buildTime: 4
     buildCost: 0
     sellCost: 0

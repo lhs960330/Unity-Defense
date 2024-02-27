@@ -50,7 +50,7 @@ public class TowerPlace : MonoBehaviour,
 
     public void BuildTower(string name)
     {
-      if(name == "Archor")
+     /* if(name == "Archor")
         {
             gameObject.SetActive(false);
            Tower tower= Instantiate(archorTower.prefab, transform.position, transform.rotation);
@@ -73,6 +73,6 @@ public class TowerPlace : MonoBehaviour,
             gameObject.SetActive(false);
             Tower tower = Instantiate(barracksTower.prefab, transform.position, transform.rotation);
             tower.SetTowerPlace(this);
-        }
+        }*/
     }
 }

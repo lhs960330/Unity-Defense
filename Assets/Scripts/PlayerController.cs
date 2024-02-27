@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }*/
-    private void OnTriggerStay(Collider other)
+   /* private void OnTriggerStay(Collider other)
     {
        // Debug.Log("Ãæµ¹ Áß");
         Monster monster = other.GetComponent<Monster>();
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
                 Destroy(monster.gameObject);
             }
         }
-    }
+    }*/
     private void MoveTo(Vector3 point)
     {
         agent.destination = point;
